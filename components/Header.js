@@ -29,8 +29,8 @@ const Header = () => {
 
   return (
     <div className={`header${sticky ? ' sticky' : ''}`}>
-      <Navbar light expand="md">
-        <Container>
+      <Container>
+        <Navbar light expand="md">
           <NavbarBrand href="/">LOGO</NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
@@ -49,8 +49,8 @@ const Header = () => {
               </NavItem>
             </Nav>
           </Collapse>
-        </Container>
-      </Navbar>
+        </Navbar>
+      </Container>
     </div>
   );
 }

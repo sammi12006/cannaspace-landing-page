@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+
 const Layout = (props) => {
   return (
     <div>
@@ -16,7 +17,8 @@ const Layout = (props) => {
       <div>
         {props.children}
       </div>
-</div>
+
+    </div>
   )
 }
 export default Layout;

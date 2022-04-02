@@ -7,7 +7,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
 } from 'reactstrap';
 
 const Header = () => {
@@ -31,7 +31,7 @@ const Header = () => {
     <div className={`header${sticky ? ' sticky' : ''}`}>
       <Container>
         <Navbar light expand="md">
-          <NavbarBrand href="/">LOGO</NavbarBrand>
+          <NavbarBrand href="/"><object type="image/svg+xml" width="200" data="images/cannaspace-logo.svg">Your browser does not support SVGs</object></NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="m-auto" navbar>

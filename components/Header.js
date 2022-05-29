@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Collapse,
@@ -8,7 +8,7 @@ import {
   Nav,
   NavItem,
   NavLink,
-} from 'reactstrap';
+} from "reactstrap";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +16,7 @@ const Header = () => {
   const toggle = () => setIsOpen(!isOpen);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
   });
 
   const handleScroll = () => {
@@ -25,14 +25,22 @@ const Header = () => {
     } else if (window.scrollY < 90) {
       setSticky(false);
     }
-  }
+  };
 
   return (
-    <div className={`header${sticky ? ' sticky' : ''}`}>
+    <div className={`header${sticky ? " sticky" : ""}`}>
       <Container>
         <Navbar light expand="md">
-          <NavbarBrand href="/"><object type="image/svg+xml" width="200" data="images/cannaspace-logo.svg">Your browser does not support SVGs</object></NavbarBrand>
-          <NavbarToggler onClick={toggle} />
+          <NavbarBrand href="/">
+            <object
+              type="image/svg+xml"
+              width="200"
+              data="images/cannaspace-logo.svg"
+            >
+              Your browser does not support SVGs
+            </object>
+          </NavbarBrand>
+          {/* <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="m-auto" navbar>
               <NavItem>
@@ -48,11 +56,11 @@ const Header = () => {
                 <NavLink href="#about">About</NavLink>
               </NavItem>
             </Nav>
-          </Collapse>
+          </Collapse> */}
         </Navbar>
       </Container>
     </div>
   );
-}
+};
 
 export default Header;
